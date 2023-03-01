@@ -1,0 +1,207 @@
+[
+    {
+		"name": "Human",
+		"fcm": "70",
+		"source": ""
+	},
+	{
+		"name": "Alligator",
+		"fcm": "32",
+		"source": ""
+    },
+    {
+		"name": "Medium Cat",
+		"fcm": "150",
+		"source": ""
+    },
+    {
+		"name": "Small Cat",
+		"fcm": "100",
+		"source": ""
+    },
+    {
+		"name": "Medium Dog",
+		"fcm": "90",
+		"source": ""
+	},
+    {
+		"name": "Large Dog",
+		"fcm": "75",
+		"source": ""
+    },
+    {
+		"name": "Hamster",
+		"fcm": "450",
+		"source": ""
+    },
+    {
+		"name": "Chicken",
+		"fcm": "275",
+		"source": ""
+    },
+    {
+		"name": "Monkey",
+		"fcm": "190",
+		"source": ""
+    },
+    {
+		"name": "Horse",
+		"fcm": "44",
+		"source": ""
+    },
+    {
+		"name": "Cow",
+		"fcm": "65",
+		"source": ""
+    },
+    {
+		"name": "Rabbit",
+		"fcm": "205",
+		"source": ""
+    },
+    {
+		"name": "Elephant",
+		"fcm": "30",
+		"source": ""
+    },
+    {
+		"name": "Girafe",
+		"fcm": "65",
+		"source": ""
+    },
+    {
+		"name": "Large Whale",
+		"fcm": "20",
+		"source": ""
+	},
+	{
+		"name": "Blue Whale",
+		"fcm": "10",
+		"source": ""
+    },
+    {
+		"name": "Pygmy Shrew",
+		"fcm": "1200",
+		"source": ""
+    },
+    {
+		"name": "Hummingbirds",
+		"fcm": "1260",
+		"source": ""
+    },
+    {
+		"name": "Dolphin",
+		"fcm": "40",
+		"source": ""
+    },
+    {
+		"name": "Bear Grizzly",
+		"fcm": "40",
+		"source": ""
+	},
+	{
+		"name": "Goat",
+		"fcm": "80",
+		"source": ""
+	},
+	{
+		"name": "Pig",
+		"fcm": "120",
+		"source": ""
+	},
+	{
+		"name": "Sheep",
+		"fcm": "80",
+		"source": ""
+	},
+	{
+		"name": "Ox",
+		"fcm": "60",
+		"source": ""
+    },
+	{
+		"name": "Bear",
+		"fcm": "55",
+		"source": ""
+    },
+    {
+		"name": "Guinea pig",
+		"fcm": "300",
+		"source": ""
+    },
+    {
+		"name": "Rat",
+		"fcm": "420",
+		"source": ""
+    },
+    {
+		"name": "Mousse",
+		"fcm": "670",
+		"source": ""
+    },
+    {
+		"name": "Etruscan shrew",
+		"fcm": "835",
+		"source": ""
+    },
+    {
+		"name": "Ostrich",
+		"fcm": "90",
+		"source": ""
+    },
+    {
+		"name": "Emu",
+		"fcm": "170",
+		"source": ""
+    },
+    {
+		"name": "Pigeon",
+		"fcm": "185",
+		"source": ""
+    },
+    {
+		"name": "Wild duck",
+		"fcm": "190",
+		"source": ""
+	},
+	{
+		"name": "Tortoise",
+		"fcm": "10",
+		"source": ""
+    },
+    {
+		"name": "Turkey",
+		"fcm": "193",
+		"source": ""
+    },
+    {
+		"name": "Domestic duck",
+		"fcm": "240",
+		"source": ""
+    },
+    {
+		"name": "Buzzard",
+		"fcm": "300",
+		"source": ""
+    },
+    {
+		"name": "Hen",
+		"fcm": "312",
+		"source": ""
+    },
+    {
+		"name": "Canary",
+		"fcm": "1020",
+		"source": ""
+    },
+    {
+		"name": "Crow",
+		"fcm": "378",
+		"source": ""
+    },
+    {
+		"name": "Frog",
+		"fcm": "24",
+		"source": ""
+    }
+]
