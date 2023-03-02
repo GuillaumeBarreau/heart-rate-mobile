@@ -6,20 +6,7 @@ import { default as theme } from './theme.json';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ListHeartScreen } from './src/views/ListHeartScreen/ListHeartScreen';
-
-const InitScreen = ({navigation}) => (
-  <>
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>InitScreen</Text>
-        <Button
-          onPress={() =>
-            navigation.navigate('ListHeartRate')
-          }
-      />
-    </View>
-  </>
-);
-
+import { SwiperScreen } from './src/views/IntroSwiperScreen/IntroSwiperScreen';
 
 function DetailHeartRateScreen() {
   return (
@@ -35,8 +22,8 @@ export default function App() {
   return (
     <ApplicationProvider {...eva} theme={{ ...eva.light, ...theme }}>
      <NavigationContainer>
-      <Stack.Navigator initialRouteName="InitScreen">
-        <Stack.Screen name="InitScreen" component={InitScreen} />
+      <Stack.Navigator initialRouteName="Intro">
+        <Stack.Screen name="Intro" component={SwiperScreen} />
         <Stack.Screen name="ListHeartRate" component={ListHeartScreen} />
         <Stack.Screen name="Details" component={DetailHeartRateScreen} />
       </Stack.Navigator>
