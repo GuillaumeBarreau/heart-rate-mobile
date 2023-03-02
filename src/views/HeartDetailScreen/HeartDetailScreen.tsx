@@ -1,10 +1,16 @@
-import { View } from "react-native";
+import styled from 'styled-components/native';
 import { Text } from '@ui-kitten/components';
 
 export const HeartDetailScreen = () => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <ContainerScreen>
       <Text>HeartDetailScreen</Text>
-    </View>
+    </ContainerScreen>
   );
 }
+
+const ContainerScreen = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`

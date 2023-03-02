@@ -1,24 +1,40 @@
-import { View } from "react-native";
-import { Card, Layout, List, Text } from '@ui-kitten/components';
-import { StyleSheet } from 'react-native';
+import { View, Dimensions } from "react-native";
+import { Card, Layout, List, Text, Avatar } from '@ui-kitten/components';
+import { StyleSheet, Image } from 'react-native';
 import data from "../../data/data.json"
-import { HeartRateSvgAnimateComponent } from "../HeartRateSvgAnimateComponent/HeartRateSvgAnimateComponent";
+import {  HeartRateSvgAnimateContainer } from "../../components/HeartRateSvgAnimate";
+import { ImportImage } from "../../components/ImportImage";
 
-export const ListHeartScreen = () => {
+const win = Dimensions.get('window');
+export const ListHeartScreen = ({navigation}) => {
 
   const renderItem = ({ item, index }) => {
+    const navigationToDetailsScreen = () => {
+      navigation.navigate('Details')
+    }
+  
+  const sourceImage = ImportImage.GetImage(
+    `${item.name.toLowerCase()}`,
+  );
 
-    return  (
-        <Layout style={styles.cardContainer} level='1'>
-            <Card style={styles.card} status='basic'>
+    return (
+        <Layout style={styles.cardContainer} level='1' >
+            <Card style={styles.card} onPress={navigationToDetailsScreen} >
               <View style={styles.headerContainer}>
-                <Text category='h4'  style={styles.headerContainer_title}>{item.name}</Text>
                 <View style={styles.headerContainer_contentTop}>
-                  {/* <View style={styles.headerContainer_contentTop__fadeIn}></View> */}
-                  <HeartRateSvgAnimateComponent item={item}/>
+                  <View style={styles.headerContainer_contentTop__animate}>
+                    <HeartRateSvgAnimateContainer item={item}/>
+                  </View>
+                  <Image 
+                    style={styles.headerContainer_contentTop__image} 
+                    source={sourceImage}
+                  /> 
+                  <View style={styles.headerContainer_contentTop__textContainer}>
+                    <Text category='h4'  style={styles.headerContainer_contentTop__textContainer_title}>{item.name}</Text>
+                  </View>
                 </View>
+                {/* <HeartRateSvgAnimateContainer item={item}/> */}
                 <View style={styles.headerContainer_contentBottom}>
-                    {/* <Text category='s1' style={styles.headerContainer_contentBottom_description}>Heart rate</Text> */}
                     <Text category='h3' style={styles.headerContainer_contentBottom_description}>{item.fcm} <Text  appearance='hint' category='s1'>BPM</Text></Text>
                 </View>
                 </View>
@@ -40,6 +56,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   headerContainer: {
+    position: "relative",
+    justifyContent: "center",
     padding: 8,
     borderRadius: 8,
   },
@@ -47,24 +65,45 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   headerContainer_contentTop: {
-    position: "relative",
-    flexDirection: "row",
-    justifyContent: "center",
-    marginTop: 12,
+    // overflow: "hidden",
+    alignSelf: "center",
+    borderRadius: 100,
+    width: 200,
   },
-  headerContainer_contentTop__fadeIn: {
+  headerContainer_contentTop__image: {
+    width: 200,
+    height: 200, 
+    borderRadius: 100,
+    alignSelf: "center"
+  },
+  headerContainer_contentTop__animate: {
+    position: "relative",
+    width: 200,
+    borderRadius: 100,
+    backgroundColor: "red"
+  },
+  headerContainer_contentTop__textContainer: {
     position: "absolute",
-    height: "100%",
-    width: "100%",
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+    overflow: "hidden"
   },
   headerContainer_contentBottom: {
       marginTop: 12,
       flexDirection: "row",
       justifyContent: "flex-end",
   },
-  headerContainer_title: {
-    marginLeft: 0,
+  headerContainer_contentCenter: {
+      justifyContent: "flex-end",
+  },
+  headerContainer_contentTop__textContainer_title: {
+    position: "absolute",
     textAlign: "center",
+    marginLeft: 0,
+    width: "100%",
+    top: 140,
+    backgroundColor: "white",
   },
   headerContainer_contentBottom_description: {
     textAlign: "left",
@@ -78,6 +117,7 @@ const styles = StyleSheet.create({
     margin: 16,
     borderRadius: 12,
     display: "flex",
+    backgroundColor: "white",
   },
 });
 

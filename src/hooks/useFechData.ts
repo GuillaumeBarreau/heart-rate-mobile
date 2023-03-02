@@ -20,7 +20,7 @@ interface IMethodUseGetData {
     state: IInitialState
 }
 
-export const useFechData = ():IMethodUseGetData => {
+export const useFetchData = ():IMethodUseGetData => {
     const initialState:IInitialState = {
         status: IStatus.IDLE,
         error: null,

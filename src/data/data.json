@@ -6,6 +6,7 @@
 	},
 	{
 		"name": "Alligator",
+		"path": "alligator",
 		"fcm": "32",
 		"source": ""
     },

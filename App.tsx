@@ -7,10 +7,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ListHeartScreen } from './src/views/ListHeartScreen/ListHeartScreen';
 
-const HeartRateScreen = () => (
+const InitScreen = ({navigation}) => (
   <>
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>HeartRateScreen</Text>
+      <Text>InitScreen</Text>
+        <Button
+          onPress={() =>
+            navigation.navigate('ListHeartRate')
+          }
+      />
     </View>
   </>
 );
@@ -30,10 +35,10 @@ export default function App() {
   return (
     <ApplicationProvider {...eva} theme={{ ...eva.light, ...theme }}>
      <NavigationContainer>
-      <Stack.Navigator initialRouteName="ListHeartRate">
-        <Stack.Screen name="HeartRate" component={HeartRateScreen} />
+      <Stack.Navigator initialRouteName="InitScreen">
+        <Stack.Screen name="InitScreen" component={InitScreen} />
         <Stack.Screen name="ListHeartRate" component={ListHeartScreen} />
-        <Stack.Screen name="DetailHeartRate" component={DetailHeartRateScreen} />
+        <Stack.Screen name="Details" component={DetailHeartRateScreen} />
       </Stack.Navigator>
      </NavigationContainer>
     </ApplicationProvider>
@@ -43,7 +48,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
